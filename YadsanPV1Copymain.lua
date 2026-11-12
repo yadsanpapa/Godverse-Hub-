@@ -16,29 +16,29 @@ local now = tick()
 
 -- وقت آخر تشغيل تلقائي (يكتبه الكود اللي بالطابور). ما نمسحه بعد القراءة،
 -- عشان كل النسخ المكررة تشوفه
-local launchAt   = env.CrypticAutoLaunchAt
+local launchAt   = env.YadsanAutoLaunchAt
 local autoLaunch = type(launchAt) == "number" and (now - launchAt) < DUP_WINDOW
 
 -- نفس الجلسة = نفس كائن اللاعب (lp).
 -- بعد أي نقل أو إعادة دخول يتغير lp، فالعلامة القديمة ما تأثر.
-local sameSession = env.CrypticHub_Loaded == true and env.CrypticHub_Player == lp
+local sameSession = env.YadsanHubPV1_Loaded == true and env.YadsanHubPV1_Player == lp
 
 -- الجلسة بدأت قبل ثواني بس؟ إذاً هذا تشغيل مكرر مو يدوي
-local startAt     = env.CrypticHub_StartAt
+local startAt     = env.YadsanHubPV1_StartAt
 local justStarted = sameSession and type(startAt) == "number" and (now - startAt) < DUP_WINDOW
 
 if sameSession and (autoLaunch or justStarted) then return end
 
 -- نحجز الجلسة فوراً (قبل أي انتظار) عشان النسخة الثانية تلقاها محجوزة
 if not sameSession then
-    env.CrypticHub_Loaded  = true
-    env.CrypticHub_Player  = lp
-    env.CrypticHub_StartAt = now
+    env.YadsanHubPV1_Loaded  = true
+    env.YadsanHubPV1_Player  = lp
+    env.YadsanHubPV1_StartAt = now
 end
 
 local Cryptic = {
     Config = {
-        UserName = "OnlyCryptic", RepoName = "Cryptic", Branch = "hm",
+        UserName = "OnlyYadsan", RepoName = "Yadsan", Branch = "hm",
         Discord = "https://discord.gg/QSvQJs7BdP"
     },
     -- ملاحظة: سجل الماب (GameIds بالـ Universe ID) موجود في
@@ -49,13 +49,13 @@ local Cryptic = {
 -- ============================================================
 -- التشغيل التلقائي بعد النقل / إعادة الدخول
 -- ============================================================
-local AUTOEXEC_FILE = "CrypticAutoExec.json"
+local AUTOEXEC_FILE = "YadsanAutoExec.json"
 
 -- كود يتحط بطابور النقل. conditional = true يعني: يشتغل بس لو التوغل لسا مفعّل
 local function BuildLoader(conditional)
     local url = string.format(
         "https://raw.githubusercontent.com/%s/%s/%s/main.lua",
-        Cryptic.Config.UserName, Cryptic.Config.RepoName, Cryptic.Config.Branch
+        Yadsan.Config.UserName, Yadsan.Config.RepoName, Yadsan.Config.Branch
     )
 
     local check = ""
@@ -73,7 +73,7 @@ local function BuildLoader(conditional)
 pcall(function()
     if not game:IsLoaded() then game.Loaded:Wait() end
     task.wait(2)
-%s    getgenv().CrypticAutoLaunchAt = tick()
+%s    getgenv().YadsanAutoLaunchAt = tick()
     loadstring(game:HttpGet(%q .. "?v=" .. tick()))()
 end)
 ]], check, url)
@@ -97,18 +97,18 @@ end
 -- يجهّز التشغيل التلقائي مرة وحدة لكل جلسة (الطابور يشتغل بس على أول نقل،
 -- فكل ما يشتغل السكربت نجهّزه من جديد)
 local function ArmAutoExec()
-    if env.CrypticAutoExecArmed == lp then return end
+    if env.YadsanAutoExecArmed == lp then return end
     if QueueOnTeleport(BuildLoader(true)) then
-        env.CrypticAutoExecArmed = lp
+        env.YadsanAutoExecArmed = lp
     end
 end
-env.CrypticArmAutoExec = ArmAutoExec -- يستخدمه توغل التشغيل التلقائي
+env.YadsanArmAutoExec = ArmAutoExec -- يستخدمه توغل التشغيل التلقائي
 
 -- ============================================================
 -- استيراد ملف من المستودع
 -- ============================================================
 local function Import(path)
-    local url = "https://raw.githubusercontent.com/" .. Cryptic.Config.UserName .. "/" .. Cryptic.Config.RepoName .. "/" .. Cryptic.Config.Branch .. "/" .. path .. "?v=" .. tick()
+    local url = "https://raw.githubusercontent.com/" .. Yadsan.Config.UserName .. "/" .. Yadsan.Config.RepoName .. "/" .. Yadsan.Config.Branch .. "/" .. path .. "?v=" .. tick()
     local s, r = pcall(game.HttpGet, game, url)
     if s and r then
         local f = loadstring(r)
@@ -118,14 +118,14 @@ local function Import(path)
 end
 
 -- ============================================================
--- تحميل سجل الماب من Cryptic/Maps/index.lua
+-- تحميل سجل الماب من Yadsan/Maps/index.lua
 -- ============================================================
 do
     local registry = Import("Maps/index.lua")
     if type(registry) == "table" then
-        Cryptic.GameIds = registry.GameIds or {}
+        Yadsan.GameIds = registry.GameIds or {}
     else
-        Cryptic.GameIds = {}
+        Yadsan.GameIds = {}
     end
 end
 
@@ -135,7 +135,7 @@ end
 local i18n = Import("i18n.lua")
 if i18n then
     i18n.Load()                        -- يقرأ اللغة المحفوظة لو موجودة
-    getgenv().CrypticI18n = i18n       -- متاح لكل الموديولات
+    getgenv().YadsanI18n = i18n       -- متاح لكل الموديولات
 end
 
 -- ============================================================
@@ -152,7 +152,7 @@ local function T(key)
 end
 
 local function BuildStructure()
-    Cryptic.Structure = {
+    Yadsan.Structure = {
         ["player"]      = { Icon = "👤", Key = "tab.player",   Folder = "Player",   Files = {"so", "blox", "gold", "auto_apple", "vi", "speed", "fly", "jumppower", "noclip", "antifling", "walkfling", "flyfling", "wallwalk", "nofall", "infinitejump", "3d", "restart", "out", "discord", "di2"} },
         ["tools"]       = { Icon = "🔧", Key = "tab.tools",    Folder = "Misc",     Files = {"lol", "tptool", "auto_tool", "fling_tool", "noclip_tool", "emotes", "esp", "nbc_esp", "tool_esp", "shiftlock", "invis_tool", "spin_tool", "x-ray", "fullbright", "no_fog", "camera"} },
         ["target"]      = { Icon = "🎯", Key = "tab.target",   Folder = "Combat",   Files = {"target_select", "target_tp", "target_spectate", "target_aimbot", "target_sit", "target_mimic", "target_fling", "bring_parts", "carry", "jark", "Target_follow", "target_esp", "copy_skin1", "target_emotes", "target_facesit", "info_t", "skinz"} },
@@ -161,13 +161,13 @@ local function BuildStructure()
         ["other"]       = { Icon = "⚡", Key = "tab.other",    Folder = "Other",    Files = {"animations", "lol", "vfly", "zero_gravity", "anti_block", "anti_sit", "fling_all", "night", "infinite_zoom", "no_camera_clip", "anti_afk", "aimbot"} },
         ["settings"]    = { Icon = "⚙️", Key = "tab.settings", Folder = "Settings",  Files = {"transparency", "anti_lag", "ui_lock", "ui_toggle", "auto_execute", "settings", "suggestion_box"} },
     }
-    Cryptic.TabsOrder = {
+    Yadsan.TabsOrder = {
         "player", "tools", "target", "other", "teleport", "server", "settings"
     }
 end
 
 local function TabDisplayName(id)
-    local data = Cryptic.Structure[id]
+    local data = Yadsan.Structure[id]
     if not data then return id end
     if data._isMapTab and data._mapData then
         return "🗺️ " .. data._mapData.Name
@@ -176,7 +176,7 @@ local function TabDisplayName(id)
 end
 
 local function TabIcon(id)
-    local data = Cryptic.Structure[id]
+    local data = Yadsan.Structure[id]
     if not data then return nil end
     if data._isMapTab then return nil end
     return data.Icon
@@ -185,7 +185,7 @@ end
 local ElementCache = {}
 local function LoadElement(elementName)
     if ElementCache[elementName] then return ElementCache[elementName] end
-    local url = "https://raw.githubusercontent.com/" .. Cryptic.Config.UserName .. "/" .. Cryptic.Config.RepoName .. "/" .. Cryptic.Config.Branch .. "/UI/Elements/" .. elementName .. ".lua?v=" .. tick()
+    local url = "https://raw.githubusercontent.com/" .. Yadsan.Config.UserName .. "/" .. Yadsan.Config.RepoName .. "/" .. Yadsan.Config.Branch .. "/UI/Elements/" .. elementName .. ".lua?v=" .. tick()
     local s, r = pcall(game.HttpGet, game, url)
     if s and r then
         local chunk = loadstring(r)
@@ -195,13 +195,13 @@ local function LoadElement(elementName)
             return func
         end
     end
-    warn("Cryptic Hub: Failed to load element - " .. elementName)
+    warn("Yadsan Hub: Failed to load element - " .. elementName)
     return nil
 end
 
 -- يعرض MakeOpen لباقي الملفات (مثل aimbot.lua) عشان تستخدم نفس كرت Open
 -- تبع قسم Target و Build. ما يستخدمه إلا من يناديه.
-getgenv().CrypticMakeOpen = function(parentTab, title, icon)
+getgenv().YadsanMakeOpen = function(parentTab, title, icon)
     local openFunc = LoadElement("Open")
     if not openFunc then return nil end
     local openTab = openFunc(parentTab, title, icon)
@@ -217,15 +217,15 @@ end
 
 -- التعرف على الماب بالـ Universe ID فقط (game.GameId)
 local function InjectMapTab()
-    local mapFilePath = Cryptic.GameIds and Cryptic.GameIds[game.GameId]
+    local mapFilePath = Yadsan.GameIds and Yadsan.GameIds[game.GameId]
     if not mapFilePath then return end
 
     local mapData = Import(mapFilePath .. ".lua")
     if type(mapData) ~= "table" then return end
 
     local id = "map_current"
-    Cryptic.Structure[id] = { _isMapTab = true, _mapData = mapData }
-    table.insert(Cryptic.TabsOrder, 2, id)
+    Yadsan.Structure[id] = { _isMapTab = true, _mapData = mapData }
+    table.insert(Yadsan.TabsOrder, 2, id)
 end
 
 -- ============================================================
@@ -239,7 +239,7 @@ local function RejoinForLanguage()
     local function notify(text)
         pcall(function()
             StarterGui:SetCore("SendNotification", {
-                Title = "Cryptic Hub", Text = text, Duration = 5,
+                Title = "Yadsan Hub PV1", Text = text, Duration = 5,
             })
         end)
     end
@@ -285,7 +285,7 @@ local function RejoinForLanguage()
 end
 
 -- ============================================================
--- بدء واجهة Cryptic Hub
+-- بدء واجهة Yadsan Hub PV1 
 -- ============================================================
 local function StartCrypticHub()
     BuildStructure()
@@ -294,9 +294,9 @@ local function StartCrypticHub()
 
     if UI then
         -- تم تصحيح علامة الدمج هنا إلى (..) لتفادي أي خطأ
-        local MainWin = UI:CreateWindow("Cryptic Hub / " .. Cryptic.Config.Discord)
+        local MainWin = UI:CreateWindow("Yadsan Hub PV1/ " .. Yadsan.Config.Discord)
 
-        getgenv().CrypticOpenLangPicker = function()
+        getgenv().YadsanOpenLangPicker = function()
             local Picker = Import("UI/LanguagePicker.lua")
             if Picker and i18n then
                 Picker.Show(i18n, function(code)
@@ -308,8 +308,8 @@ local function StartCrypticHub()
             end
         end
 
-        for _, tabId in ipairs(Cryptic.TabsOrder) do
-            local tabData = Cryptic.Structure[tabId]
+        for _, tabId in ipairs(Yadsan.TabsOrder) do
+            local tabData = Yadsan.Structure[tabId]
             if tabData then
                 local CurrentTab = MainWin:CreateTab(TabDisplayName(tabId), TabIcon(tabId))
 
@@ -475,7 +475,7 @@ local function RunInboxCheck()
     task.spawn(function()
         local CheckInbox = Import("Modules/Inbox.lua")
         if type(CheckInbox) == "function" then
-            CheckInbox(Cryptic.Config)
+            CheckInbox(Yadsan.Config)
         end
     end)
 end
@@ -490,24 +490,24 @@ local function Boot()
     RunInboxCheck()
 
     if not i18n then
-        StartCrypticHub()
+        StartYadsanHubPV1()
         return
     end
 
     if i18n.HasSaved() then
-        StartCrypticHub()
+        StartYadsanHubPV1()
         return
     end
 
     local Picker = Import("UI/LanguagePicker.lua")
     if not Picker then
-        StartCrypticHub()
+        StartYadsanHubPV1()
         return
     end
 
     Picker.Show(i18n, function(code)
         if code then i18n.Set(code) end
-        StartCrypticHub()
+        StartYadsanHubPV1()
     end, { closable = false })
 end
 
