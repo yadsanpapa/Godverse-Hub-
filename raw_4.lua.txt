@@ -550,7 +550,7 @@ local function func9(text, arg2, arg3)
 end
 
 func9("💻 " .. _G.CustomName .. " AUTO REPLY BOT", v4, function()
-	local v1 = func1("AUTO REPLY BOT BY LAKSHY 💀💻 _____________________________________________________________________________________________________________________RONA KA LIYA READY H0 JA BXL 🤣😎...")
+	local v1 = func1("AUTO REPLY BOT BY YADSAN 💀💻 _____________________________________________________________________________________________________________________RONA KA LIYA READY H0 JA BXL 🤣😎...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3130,7 +3130,7 @@ func9("🧿 " .. _G.CustomName .. " SPAMMER\n(MINI ROASTER)", v4, function()
 end)
 
 func9("💥 " .. _G.CustomName .. " 3\nTARGET OWNER SPAMMER", v5, function()
-	local v1 = func1("LAKSHY 3 TARGET SPAMMER 👑 ___________________________________________________________________________________________________LETS START THE DESTROYER 💀🔥.....")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 TARGET SPAMMER 👑 ___________________________________________________________________________________________________LETS START THE DESTROYER 💀🔥.....")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3143,7 +3143,7 @@ func9("💥 " .. _G.CustomName .. " 3\nTARGET OWNER SPAMMER", v5, function()
 end)
 
 func9("🏴‍☠️ " .. _G.CustomName .. " 2\nTARGET OWNER SPAMMER", v5, function()
-	local v1 = func1("LAKSHY 2 TARGET SPAMMER 🌊 ______________________________________________________________________________________________PILAI IS GOING TO DONE BY LAKSHY 😂💀.....")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 TARGET SPAMMER 🌊 ______________________________________________________________________________________________PILAI IS GOING TO DONE BY YADSAN 😂💀.....")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3156,7 +3156,7 @@ func9("🏴‍☠️ " .. _G.CustomName .. " 2\nTARGET OWNER SPAMMER", v5, funct
 end)
 
 func9("🌌 " .. _G.CustomName .. " OWNER\nSPAMMER V1", v5, function()
-	local v1 = func1("Lakshy SPAMMER V1 ⚔ ______________________________________________________________________________________LAKSHY SA DARKA BHAG MAT BXL GAME OVER HAI TERA 😎💀...")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 SPAMMER V1 ⚔ ______________________________________________________________________________________YADSAN SA DARKA BHAG MAT BXL GAME OVER HAI TERA 😎💀...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3169,7 +3169,7 @@ func9("🌌 " .. _G.CustomName .. " OWNER\nSPAMMER V1", v5, function()
 end)
 
 func9("🎯 " .. _G.CustomName .. " OWNER\nSPAMMER V2", v5, function()
-	local v1 = func1("Lakshy SPAMMER V2 ⚔ ________________________________________________________________________________________________LAKSHY SA PILNA KA LIYA READY H0 JA 😂💀.....")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 SPAMMER V2 ⚔ ________________________________________________________________________________________________YADSAN SA PILNA KA LIYA READY H0 JA 😂💀.....")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3182,7 +3182,7 @@ func9("🎯 " .. _G.CustomName .. " OWNER\nSPAMMER V2", v5, function()
 end)
 
 func9("👑 " .. _G.CustomName .. " OWNER\nSPAMMER V3", v5, function()
-	local v1 = func1("Lakshy SPAMMER V3 👅 ____________________________________________________________________________________________________________GET READY TO DFFN BY LAKSHY 😎🤣.....")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 SPAMMER V3 👅 ____________________________________________________________________________________________________________GET READY TO DFFN BY YADSAN 😎🤣.....")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3694,7 +3694,7 @@ func8("STOP TROLL 🚫", v3, function()
 end)
 
 func8("👑 LESS WARNING MULTI FAKEOUT BANG", v6, function()
-	local v1 = func1("LAKSHY MULTI-TARGET FAKEOUT BANG LOADED 💀🔥 -----//----TARGET BHI BOLA KI BANG HAI YA FAKEOUT? 🤣💀----||---- AB BANG + FAKEOUT AK SATH 💀🔥---//---SCRIPTED BY LAKSHY 🔥👑")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 MULTI-TARGET FAKEOUT BANG LOADED 💀🔥 -----//----TARGET BHI BOLA KI BANG HAI YA FAKEOUT? 🤣💀----||---- AB BANG + FAKEOUT AK SATH 💀🔥---//---SCRIPTED BY YADSAN 😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3707,7 +3707,7 @@ func8("👑 LESS WARNING MULTI FAKEOUT BANG", v6, function()
 end)
 
 func8("⚔ MULTI TARGET FAKEOUT BANG ( O DELAY )", v6, function()
-	local v1 = func1("LAKSHY MULTI-TARGET FAKEOUT BANG LOADED 💀🔥 -----//----TARGET BHI BOLA KI BANG HAI YA FAKEOUT? 🤣💀----||---- AB BANG + FAKEOUT AK SATH 💀🔥---//---SCRIPTED BY LAKSHY 🔥👑")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 MULTI-TARGET FAKEOUT BANG LOADED 💀🔥 -----//----TARGET BHI BOLA KI BANG HAI YA FAKEOUT? 🤣💀----||---- AB BANG + FAKEOUT AK SATH 💀🔥---//---SCRIPTED BY YADSAN 😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3720,7 +3720,7 @@ func8("⚔ MULTI TARGET FAKEOUT BANG ( O DELAY )", v6, function()
 end)
 
 func8("🕷 BEST BACK/FRONT BANG", v6, function()
-	local v1 = func1("LAKSHY BANG LOADED 😎 ---//---TARGET BHI BOLA BX KONSA BANG HAI 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------SCRIPTED BY LAKSHY 🔥💀")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 BANG LOADED 😎 ---//---TARGET BHI BOLA BX KONSA BANG HAI 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------SCRIPTED BY YADSAN 😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3733,7 +3733,7 @@ func8("🕷 BEST BACK/FRONT BANG", v6, function()
 end)
 
 func8("🎯 LESS WARNING BANG ( LESS STICK )", v6, function()
-	local v1 = func1("LAKSHY BANG LOADED 😎 ---//---TARGET BHI BOLA BX KONSA BANG HAI 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------SCRIPTED BY LAKSHY 😎💀")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 BANG LOADED 😎 ---//---TARGET BHI BOLA BX KONSA BANG HAI 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------SCRIPTED BY YADSAN 😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3746,7 +3746,7 @@ func8("🎯 LESS WARNING BANG ( LESS STICK )", v6, function()
 end)
 
 func8("💀 MULTI-TARGET BACK/FRONT BANG", v6, function()
-	local v1 = func1("LAKSHY MULTI-TARGET BANG LOADED 💀 ---//---MULTI TARGET AK SATH PELU 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------EXECUTED BY LAKSHY 🔥💀")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 MULTI-TARGET BANG LOADED 💀 ---//---MULTI TARGET AK SATH PELU 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------EXECUTED BY YADSAN 😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3759,7 +3759,7 @@ func8("💀 MULTI-TARGET BACK/FRONT BANG", v6, function()
 end)
 
 func8("🚩 LESS WARNING MULTI BANG ( LESS STICK )", v6, function()
-	local v1 = func1("LAKSHY MULTI-TARGET BANG LOADED 💀 ---//---MULTI TARGET AK SATH PELU 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------EXECUTED BY LAKSHY 🔥💀")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 MULTI-TARGET BANG LOADED 💀 ---//---MULTI TARGET AK SATH PELU 💀🔥----||----TARGET BHAGNA KA LIYA READY HOGYA 🤣💀--------------///---------------EXECUTED BY YADSAN 😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3784,7 +3784,7 @@ func8("🕸 INFINITY YIELD", v6, function()
 end)
 
 func8("🛍 OUTFIT REVEALER", v7, function()
-	local v1 = func1("LAKSHY OUTFIT REVEALER 💀 ___________________________SEARCH THE NAME OR ID IN THE AVATAR SHOP 🍃🍃____________________________GET WHOLE FIT INCLUDING BODY AND ANIMATIONS 👀🔥...")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 OUTFIT REVEALER 🤫 ___________________________SEARCH THE NAME OR ID IN THE AVATAR SHOP 🍃🍃____________________________GET WHOLE FIT INCLUDING BODY AND ANIMATIONS 😏...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3915,7 +3915,7 @@ func8("😴 ANTI-AFK", v8, function()
 end)
 
 func8("🪐 TELEPORTER", v9, function()
-	local v1 = func1("TELEPORTER V1 BY LAKSHY 🚄 ____________________________________________________________________________________________________________________AJA TERI RAIL BNATA HU 💀😂...")
+	local v1 = func1("TELEPORTER V1 BY YADSAN 🚄 ____________________________________________________________________________________________________________________AJA TERI RAIL BNATA HU 💀😂...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3928,7 +3928,7 @@ func8("🪐 TELEPORTER", v9, function()
 end)
 
 func8("⚓ TELEPORTER + VOID", v9, function()
-	local v1 = func1("TELEPORTER V2 BY LAKSHY 😈 ________________________________________________________________________________________________________ LAKSHY KA TELEPORTER SA LAG HORA 😎😂 ?...")
+	local v1 = func1("TELEPORTER V2 BY YADSAN 😈 ________________________________________________________________________________________________________CELESTIAL SYNDICATE GV1 🗿 KA TELEPORTER SA LAG HORA 😎😂 ?...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3941,7 +3941,7 @@ func8("⚓ TELEPORTER + VOID", v9, function()
 end)
 
 func8("🌪️ AUTO FAKEOUT (UNLIMITED)", v9, function()
-	local v1 = func1("FAKEOUT BY LAKSHY 🔥 ________________________________________________________________________________________________________________________________LAKSHY FAKEOUT Loaded...")
+	local v1 = func1("FAKEOUT BY YADSAN 🔥 ________________________________________________________________________________________________________________________________CELESTIAL SYNDICATE GV1 🗿 FAKEOUT Loaded...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3954,7 +3954,7 @@ func8("🌪️ AUTO FAKEOUT (UNLIMITED)", v9, function()
 end)
 
 func8("😏 ANTI-BANG V1", v9, function()
-	local v1 = func1("LAKSHY ANTI-BANG V1 LOADED 💀 ____________________________________________________________________________________________________________TABAHI MODE ON BANG KAR AB MX 😂💀")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 ANTI-BANG V1 LOADED 💀 ____________________________________________________________________________________________________________TABAHI MODE ON BANG KAR AB MX 😂💀")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3967,7 +3967,7 @@ func8("😏 ANTI-BANG V1", v9, function()
 end)
 
 func8("🔥 ANTI-BANG V2", v9, function()
-	local v1 = func1("LAKSHY ANTI-BANG V2 LOADED 🔥 _______________________________________________________________________________________________AO BETA LAKSHY KA ANTI-BANG KI POWER DEKHO 💪😂")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 ANTI-BANG V2 LOADED 🔥 _______________________________________________________________________________________________AO BETA YADSAN KA ANTI-BANG KI POWER DEKHO 💪😂")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3980,7 +3980,7 @@ func8("🔥 ANTI-BANG V2", v9, function()
 end)
 
 func8("🎃 ANTI-BANG V3", v9, function()
-	local v1 = func1("LAKSHY ANTI-BANG V3 LOADED 😎 ___________________________________________________________________________________KYA HUA BETA ? BANG LAKSHY KA ANTI-BANG SA DFFN H0 GYA 🤣💀")
+	local v1 = func1("CELESTIAL SYNDICATE GV1 ANTI-BANG V3 LOADED 😎 ___________________________________________________________________________________KYA HUA BETA ? BANG YADSAN KA ANTI-BANG SA DFFN H0 GYA 🤣💀")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -3993,7 +3993,7 @@ func8("🎃 ANTI-BANG V3", v9, function()
 end)
 
 func8("🕳 SKY AND VOID FALL", v9, function()
-	local v1 = func1("SKY AND VOID FALLER BY LAKSHY 🕳 ___________________________________________________________________________________________________________KOI SA BHI BANG KAR LE AB 💀😂...")
+	local v1 = func1("SKY AND VOID FALLER BY YADSAN 🕳 ___________________________________________________________________________________________________________KOI SA BHI BANG KAR LE AB 💀😂...")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -4005,8 +4005,8 @@ func8("🕳 SKY AND VOID FALL", v9, function()
 	loadstring(game:HttpGet("https://pastefy.app/R19boYKQ/raw"))()
 end)
 
-func8("👻 LAKSHY SHIELD", v9, function()
-	local v1 = func1("LAKSHY SHIELD LOADED 🛡💀 ________________________________________________________________________________________________________________________FULL SET OF SHIELDS 😎✨")
+func8("👻 CELESTIAL SYNDICATE GV1 SHIELD", v9, function()
+	local v1 = func1("CELESTIAL SYNDICATE GV1 SHIELD LOADED 🛡________________________________________________________________________________________________________________________FULL SET OF SHIELDS 😎✨")
 	local TextChatService = game:GetService("TextChatService")
 
 	if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
@@ -4039,7 +4039,7 @@ textLabel1.TextSize = 20
 textLabel1.Font = Enum.Font.GothamBold
 textLabel1.TextWrapped = true
 textLabel1.TextYAlignment = "Top"
-textLabel1.Text = "👑 Oᴡɴᴇʀ - Lᴀᴋsʜʏ \n\n🔳 Rᴏʙʟᴏx ID- Alone_12A5, luckyhuywr \n\n♣ Iɴsᴛᴀɢʀᴀᴍ ID- Lakshy_.here\n\n🌐 Sɴᴀᴘᴄʜᴀᴛ ID- callme.lakshy \n\n🔥 Bᴀɴɢ ᴀɴᴅ Sᴘᴀᴍ ᴛᴏ Dᴇsᴛʀᴏʏ Aɴʏᴏɴᴇ 🔥\n\n▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\n\n💠 Rᴏʙʟᴏx Uѕᴇʀɴᴀᴍᴇ- Alone_12A5\n\n💠 Sᴄʀɪᴘᴛ Wɪᴛʜ Uɴʙᴇʟɪᴇᴠᴀʙʟᴇ Fᴇᴀᴛᴜʀᴇs ♠"
+textLabel1.Text = "👑 OWNER - YADSAN \n\n🔳 Rᴏʙʟᴏx ID- Univers_DaddyXD, luckyhuywr \n\n♣ Iɴsᴛᴀɢʀᴀᴍ ID- \n\n🌐 CELESTIAL X ASUKA X ZM \n\n🔥 Bᴀɴɢ ᴀɴᴅ Sᴘᴀᴍ ᴛᴏ Dᴇsᴛʀᴏʏ Aɴʏᴏɴᴇ 🔥\n\n▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣\n\n💠 Rᴏʙʟᴏx Uѕᴇʀɴᴀᴍᴇ- Yadsan_Godverse\n\n💠 Sᴄʀɪᴘᴛ Wɪᴛʜ Uɴʙᴇʟɪᴇᴠᴀʙʟᴇ Fᴇᴀᴛᴜʀᴇs ♠"
 
 RunService.Stepped:Connect(function()
 	if _G.Noclip then
