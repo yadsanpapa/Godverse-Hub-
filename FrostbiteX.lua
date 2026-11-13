@@ -6,7 +6,7 @@
 -- Net is a game-provided module whose internals were not supplied.
 -- Apparent bugs (the CellPadding type and undefined notify) are preserved.
 
-print("[AUTH0R HUB] Loading FULL Re-Sizer...")
+print("[Frostbite X] Loading FULL Re-Sizer...")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local UserInputService = game:GetService("UserInputService")
@@ -16,7 +16,7 @@ local TextChatService = game:GetService("TextChatService")
 local player = Players.LocalPlayer
 local codeFont = Enum.Font.Code
 local boldFont = Enum.Font.GothamBold
-local forcedBio = "Members Of White Garden"
+local forcedBio = "Celestial Syndicate On Top 🔱 Vicious Is My Son"
 local function getPlayerLabel()
     local displayName = player.DisplayName
     local username = player.Name
@@ -52,7 +52,7 @@ local function announceExecution()
     local bannerLines = {
         "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬",
         "★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★",
-        "       ✦ FE AUTH0R ✦",
+        "       ✦ FE Frostbite X ✦",
         "        SIZE  RE-SIZER",
         "★━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━★",
         "(!)(!)(*)(*)  EXECUTED BY  (!)(!)(*)(*)",
@@ -71,7 +71,7 @@ announceExecution()
 pcall(function()
     StarterGui:SetCore(
         "SendNotification",
-        { Title = "AUTH0R SIZE RE-SIZER", Text = "Loaded by " .. getPlayerLabel(), Duration = 5 }
+        { Title = "Frostbite X Re-Size", Text = "Loaded by " .. getPlayerLabel(), Duration = 5 }
     )
 end)
 local cachedNet
@@ -139,7 +139,7 @@ local function setBio(maxAttempts)
             end
             task.wait(0.8)
             setBioStatus("set")
-            print("[AUTH0R HUB] Bio sent ✓ (attempt " .. attempt .. ")")
+            print("[Frostbite X] Bio sent ✓ (attempt " .. attempt .. ")")
             return true, attempt
         end
     end
@@ -264,12 +264,12 @@ local function autoHeadForHeight(requestedHeightForHead)
 end
 local function createGui()
     local playerGui = player:WaitForChild("PlayerGui")
-    local existingGui = playerGui:FindFirstChild("Auth0rResizer")
+    local existingGui = playerGui:FindFirstChild("FrostbiteXResizer")
     if existingGui then
         existingGui:Destroy()
     end
     local screenGui = Instance.new("ScreenGui")
-    screenGui.Name = "Auth0rResizer"
+    screenGui.Name = "FrostbiteXResizer"
     screenGui.ResetOnSpawn = false
     screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     screenGui.Parent = playerGui
@@ -315,7 +315,7 @@ local function createGui()
     titleLabel.Size = UDim2.new(1, -60, 1, 0)
     titleLabel.Position = UDim2.new(0, 30, 0, 0)
     titleLabel.BackgroundTransparency = 1
-    titleLabel.Text = "⚡ AUTH0R SIZE RE-SIZER"
+    titleLabel.Text = "⚡ Frostbite X Re-Size"
     titleLabel.TextColor3 = Color3.fromRGB(220, 240, 230)
     titleLabel.Font = boldFont
     titleLabel.TextSize = 13
@@ -824,19 +824,19 @@ local function createGui()
 end
 local uiSucceeded, uiError = pcall(createGui)
 if not uiSucceeded then
-    warn("[AUTH0R HUB] UI Error: " .. tostring(uiError))
+    warn("[Frostbite X] UI Error: " .. tostring(uiError))
 else
-    print("[AUTH0R HUB] UI ok")
+    print("[Frostbite X] UI ok")
 end
 -- notify is not defined in the supplied snippet; the environment must provide it.
 task.spawn(function()
     local bioSucceeded, bioAttempt = setBio(8)
     if bioSucceeded then
-        notify("AUTH0R HUB", "Bio set ✓ (" .. bioAttempt .. " attempt)", 3)
+        notify("Frostbite X", "Bio set ✓ (" .. bioAttempt .. " attempt)", 3)
     else
-        notify("AUTH0R HUB", "Bio pending — retrying", 3)
+        notify("Frostbite X", "Bio pending — retrying", 3)
     end
 end)
 task.wait(0.5)
-notify("AUTH0R HUB", "Full Re-Sizer Loaded!", 3)
-print("[AUTH0R HUB] READY ✓")
+notify("Frostbite X", "Full Re-Sizer Loaded!", 3)
+print("[Frostbite X] READY ✓")
