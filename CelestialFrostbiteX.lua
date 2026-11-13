@@ -71,7 +71,7 @@ announceExecution()
 pcall(function()
     StarterGui:SetCore(
         "SendNotification",
-        { Title = "Frostbite X Re-Size", Text = "Loaded by " .. getPlayerLabel(), Duration = 5 }
+        { Title = "Celestial Frostbite X Re-Size", Text = "Loaded by " .. getPlayerLabel(), Duration = 5 }
     )
 end)
 local cachedNet
@@ -315,7 +315,7 @@ local function createGui()
     titleLabel.Size = UDim2.new(1, -60, 1, 0)
     titleLabel.Position = UDim2.new(0, 30, 0, 0)
     titleLabel.BackgroundTransparency = 1
-    titleLabel.Text = "⚡ Frostbite X Re-Size"
+    titleLabel.Text = "⚠️ Celestial Frostbite X Re-Size"
     titleLabel.TextColor3 = Color3.fromRGB(220, 240, 230)
     titleLabel.Font = boldFont
     titleLabel.TextSize = 13
