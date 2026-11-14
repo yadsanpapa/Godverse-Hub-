@@ -3138,13 +3138,13 @@ local TabHandles = {
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 1
     }),
 
-    LifeTogether1 = Tabs.Features:Tab({
-        Title = "Life Together 1", Icon = "users", Desc = "Life Together RP tools", IconThemed = true,
+    LifeTogether = Tabs.Features:Tab({
+        Title = "Life Together", Icon = "users", Desc = "Life Together RP tools", IconThemed = true,
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 2
     }),
 
-    LifeTogether2 = Tabs.Features:Tab({
-        Title = "Life Together 2", Icon = "users", Desc = "Life Together RP tools", IconThemed = true,
+    Spammer = Tabs.Features:Tab({
+        Title = "Spammer", Icon = "message-square", Desc = "Others Spammer", IconThemed = true,
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 3
     }),
 
@@ -3269,8 +3269,8 @@ local Sections = {
     }),
 }
 
-Sections.LifeTogether1 = TabHandles.LifeTogether1:Section({
-    Title = "Life Together 1",
+Sections.LifeTogether = TabHandles.LifeTogether:Section({
+    Title = "Life Together",
     Desc = "Life Together RP tools.",
     Icon = "users",
     Box = true,
@@ -3278,10 +3278,10 @@ Sections.LifeTogether1 = TabHandles.LifeTogether1:Section({
     Opened = true
 })
 
-Sections.LifeTogether2 = TabHandles.LifeTogether2:Section({
-    Title = "Life Together 2",
-    Desc = "Life Together RP tools.",
-    Icon = "users",
+Sections.Spammer = TabHandles.Spammer:Section({
+    Title = "Spammer",
+    Desc = "Others Spammer.",
+    Icon = "message-square",
     Box = true,
     BoxBorder = true,
     Opened = true
@@ -3302,8 +3302,8 @@ local function runLifeTogetherScript(scriptUrl, displayName)
     end
 end
 
--- Life Together 1: copied from the existing Life Together 2 button set.
-Sections.LifeTogether1:Button({
+-- Life Together: from the existing Spammer button set.
+Sections.LifeTogether:Button({
     Title = "YADSAN OUTFIT COPIER",
     Desc = "Open the outfit copier GUI.",
     Callback = function()
@@ -3311,7 +3311,7 @@ Sections.LifeTogether1:Button({
     end,
 })
 
-Sections.LifeTogether1:Button({
+Sections.LifeTogether:Button({
     Title = "CELESTIAL GEN X",
     Desc = "Open Celestial Gen X.",
     Callback = function()
@@ -3319,7 +3319,7 @@ Sections.LifeTogether1:Button({
     end,
 })
 
-Sections.LifeTogether1:Button({
+Sections.LifeTogether:Button({
     Title = "CELESTIAL FROSTBITE X",
     Desc = "Open Celestial Frostbite X.",
     Callback = function()
@@ -3327,7 +3327,7 @@ Sections.LifeTogether1:Button({
     end,
 })
 
-Sections.LifeTogether1:Button({
+Sections.LifeTogether:Button({
     Title = "CELESTIAL CRYPTIC HUB",
     Desc = "Open the Cryptic hub.",
     Callback = function()
@@ -3335,35 +3335,35 @@ Sections.LifeTogether1:Button({
     end,
 })
 
-Sections.LifeTogether2:Button({
-    Title = "YADSAN OUTFIT COPIER",
+Sections.Spammer:Button({
+    Title = "Yadsan Edition Spam",
     Desc = "Open the outfit copier GUI.",
     Callback = function()
-        runLifeTogetherScript("https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Outfit_Copier_OV1", "Outfit Copier")
+        runSpammerScript("https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Spammer_OV1", "Yadsan Edition Spam")
     end,
 })
 
-Sections.LifeTogether2:Button({
+Sections.Spammer:Button({
     Title = "CELESTIAL GEN X",
     Desc = "Open Celestial Gen X.",
     Callback = function()
-        runLifeTogetherScript("https://scriptblox.com/raw/LifeTogether-RP-Gen-X-Hub-236184", "Celestial Gen X")
+        runSpammerScript("https://scriptblox.com/raw/LifeTogether-RP-Gen-X-Hub-236184", "Celestial Gen X")
     end,
 })
 
-Sections.LifeTogether2:Button({
+Sections.Spammer:Button({
     Title = "CELESTIAL FROSTBITE X",
     Desc = "Open Celestial Frostbite X.",
     Callback = function()
-        runLifeTogetherScript("https://raw.githubusercontent.com/yadsanpapa/Godverse-Hub-/refs/heads/main/CelestialFrostbiteX.lua", "Celestial Frostbite X")
+        runSpammerScript("https://raw.githubusercontent.com/yadsanpapa/Godverse-Hub-/refs/heads/main/CelestialFrostbiteX.lua", "Celestial Frostbite X")
     end,
 })
 
-Sections.LifeTogether2:Button({
+Sections.Spammer:Button({
     Title = "CELESTIAL CRYPTIC HUB",
     Desc = "Open the Cryptic hub.",
     Callback = function()
-        runLifeTogetherScript("https://raw.githubusercontent.com/OnlyCryptic/Cryptic/main/main.lua", "Celestial Cryptic Hub")
+        runSpammerScript("https://raw.githubusercontent.com/OnlyCryptic/Cryptic/main/main.lua", "Celestial Cryptic Hub")
     end,
 })
 
@@ -3375,7 +3375,7 @@ TabHandles.Update:Paragraph({
 })
 --// INFORMATION
 TabHandles.Info:Paragraph({
-    Title = "Universe 2 🌐",
+    Title = "Universe 2",
     Desc = "Made by Yadsan_Godverse",
 })
 
@@ -3386,7 +3386,7 @@ TabHandles.Info:Paragraph({
 
 TabHandles.Info:Paragraph({
     Title = "CREATOR",
-    Desc = "Yadsan Papa 🥵",
+    Desc = "Yadsan Papa",
 })
 
 TabHandles.Info:Paragraph({
