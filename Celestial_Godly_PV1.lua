@@ -2514,3 +2514,14 @@ end)
 screenGui1.Destroying:Connect(function()
 	connection:Disconnect()
 end)
+--// AUTO CHAT MESSAGE
+task.spawn(function()
+    local chatMsg = "------------//// Celestial Godly PV1 LOADED Made by Yadsan_Godverse (CELESTIAL SYNDICATE ON TOP ⚡) ////-----------------"
+    pcall(function()
+        if game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.TextChatService then
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(chatMsg)
+        else
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chatMsg, "All")
+        end
+    end)
+end)
