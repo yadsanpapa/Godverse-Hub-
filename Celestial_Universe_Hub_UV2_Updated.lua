@@ -3316,9 +3316,9 @@ AddRemoteScriptButton(LifeTogetherSection, "CELESTIAL FROSTBITE X", "Open Celest
 AddRemoteScriptButton(LifeTogetherSection, "CELESTIAL CRYPTIC HUB", "Open Celestial Cryptic Hub.", "https://raw.githubusercontent.com/OnlyCryptic/Cryptic/main/main.lua")
 
 --// XD
-AddRemoteScriptButton(XDSection, "CHANGE OUTFIT", "Open the outfit changer.", "https://scriptblox.com/raw/Universal-Script-change-outfit-92423")
-AddRemoteScriptButton(XDSection, "AJ EMOTE GUI", "Open the emote GUI.", "https://scriptblox.com/raw/Brookhaven-RP-Aj-Emote-GUI-90013")
-AddRemoteScriptButton(XDSection, "CRYPTIC HUB", "Open Cryptic Hub.", "https://scriptblox.com/raw/Universal-Script-Cryptic-hub-133245")
+AddRemoteScriptButton(XDSection, "Yadsan Edition Spam", "Open the outfit changer.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Spammer_OV1")
+AddRemoteScriptButton(XDSection, "Zero Mercy Spammer V1", "Open the emote GUI.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Zm_Spammerv1byshafi.lua")
+AddRemoteScriptButton(XDSection, "Asuka Spammer Red", "Open Cryptic Hub.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/AsukaSpammerByYadsan.lua")
 
 --// YADSAN
 AddRemoteScriptButton(YadsanSection, "INFINITE YIELD", "Open Infinite Yield admin commands.", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
