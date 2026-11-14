@@ -3281,12 +3281,12 @@ local LifeTogetherSection = TabHandles.LifeTogether:Section({
 })
 
 local XDSection = TabHandles.XD:Section({
-    Title = "XD SCRIPTS", Desc = "Outfit, emote and hub scripts.", Icon = "smile", Box = true, BoxBorder = true,
+    Title = "Spammer", Desc = "Use these troll and spammer scripts to fight other gangs.", Icon = "message-square", Box = true, BoxBorder = true,
     FontWeight = Enum.FontWeight.SemiBold, TextTransparency = 0.05, TextXAlignment = "Left", TextSize = 17, Opened = true
 })
 
 local YadsanSection = TabHandles.Yadsan:Section({
-    Title = "YADSAN SCRIPTS", Desc = "Yadsan script collection.", Icon = "star", Box = true, BoxBorder = true,
+    Title = "Yadsan Scripts", Desc = "Yadsan Best script collection.", Icon = "star", Box = true, BoxBorder = true,
     FontWeight = Enum.FontWeight.SemiBold, TextTransparency = 0.05, TextXAlignment = "Left", TextSize = 17, Opened = true
 })
 
