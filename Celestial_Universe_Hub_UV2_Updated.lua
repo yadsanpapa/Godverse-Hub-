@@ -3169,12 +3169,12 @@ local TabHandles = {
     }),
 
     XD = Tabs.Features:Tab({
-        Title = "XD", Icon = "smile", Desc = "Outfit, emote and hub scripts.", IconThemed = true,
+        Title = "Spammer", Icon = "message-square", Desc = "Troll Other Spammer scripts To Fight Other Gang.", IconThemed = true,
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 3
     }),
 
     Yadsan = Tabs.Features:Tab({
-        Title = "YADSAN", Icon = "star", Desc = "Yadsan script collection.", IconThemed = true,
+        Title = "Yadsan Scripts", Icon = "star", Desc = "Yadsan Best script collection..", IconThemed = true,
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 4
     }),
 }
