@@ -3138,14 +3138,9 @@ local TabHandles = {
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 1
     }),
 
-    Spammer = Tabs.Features:Tab({
-        Title = "Spammer", Icon = "message-square", Desc = "Single-message chat utility", IconThemed = true,
+    LifeTogether2 = Tabs.Features:Tab({
+        Title = "Life Together 2", Icon = "users", Desc = "Life Together RP tools", IconThemed = true,
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 2
-    }),
-
-    LifeTogether = Tabs.Features:Tab({
-        Title = "Life Together", Icon = "users", Desc = "Life Together RP tools", IconThemed = true,
-        Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 3
     }),
 
     Player = Tabs.Features:Tab({
@@ -3269,75 +3264,13 @@ local Sections = {
     }),
 }
 
-Sections.Spammer = TabHandles.Spammer:Section({
-    Title = "Chat Message",
-    Desc = "Send one message when you press the button. No automatic spam loop.",
-    Icon = "message-square",
-    Box = true,
-    BoxBorder = true,
-    Opened = true
-})
-
-Sections.LifeTogether = TabHandles.LifeTogether:Section({
-    Title = "Life Together RP",
-    Desc = "Optional community scripts. Only run code from sources you trust.",
+Sections.LifeTogether2 = TabHandles.LifeTogether2:Section({
+    Title = "Life Together 2",
+    Desc = "Life Together RP tools.",
     Icon = "users",
     Box = true,
     BoxBorder = true,
     Opened = true
-})
-
-local oneShotMessage = ""
-local lastMessageSent = 0
-
-Sections.Spammer:Input({
-    Title = "Message",
-    Desc = "Enter a message to send once.",
-    Flag = "OneShotChatMessage",
-    Value = "",
-    Placeholder = "Type your message...",
-    Callback = function(value)
-        oneShotMessage = tostring(value or "")
-    end,
-})
-
-Sections.Spammer:Button({
-    Title = "SEND ONCE",
-    Desc = "Sends one message; a 5-second cooldown prevents repeated clicks.",
-    Callback = function()
-        local now = os.clock()
-        if now - lastMessageSent < 5 then
-            WindUI:Notify({Title = "Please wait", Content = "Try again in a few seconds.", Duration = 3})
-            return
-        end
-
-        local message = oneShotMessage:sub(1, 200)
-        if message:gsub("%s", "") == "" then
-            WindUI:Notify({Title = "Empty message", Content = "Enter a message first.", Duration = 3})
-            return
-        end
-
-        local ok, err = pcall(function()
-            if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
-                local channels = TextChatService:FindFirstChild("TextChannels")
-                local channel = channels and (channels:FindFirstChild("RBXGeneral") or channels:FindFirstChildWhichIsA("TextChannel"))
-                assert(channel, "No available text channel")
-                channel:SendAsync(message)
-            else
-                local events = ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
-                local say = events and events:FindFirstChild("SayMessageRequest")
-                assert(say, "Legacy chat event not available")
-                say:FireServer(message, "All")
-            end
-        end)
-
-        if ok then
-            lastMessageSent = now
-            WindUI:Notify({Title = "Message sent", Content = "Your message was sent once.", Duration = 3})
-        else
-            WindUI:Notify({Title = "Chat unavailable", Content = tostring(err), Duration = 4})
-        end
-    end,
 })
 
 local function runLifeTogetherScript(scriptUrl, displayName)
@@ -3355,7 +3288,7 @@ local function runLifeTogetherScript(scriptUrl, displayName)
     end
 end
 
-Sections.LifeTogether:Button({
+Sections.LifeTogether2:Button({
     Title = "YADSAN OUTFIT COPIER",
     Desc = "Open the outfit copier GUI.",
     Callback = function()
@@ -3363,7 +3296,7 @@ Sections.LifeTogether:Button({
     end,
 })
 
-Sections.LifeTogether:Button({
+Sections.LifeTogether2:Button({
     Title = "CELESTIAL GEN X",
     Desc = "Open Celestial Gen X.",
     Callback = function()
@@ -3371,7 +3304,7 @@ Sections.LifeTogether:Button({
     end,
 })
 
-Sections.LifeTogether:Button({
+Sections.LifeTogether2:Button({
     Title = "CELESTIAL FROSTBITE X",
     Desc = "Open Celestial Frostbite X.",
     Callback = function()
@@ -3379,7 +3312,7 @@ Sections.LifeTogether:Button({
     end,
 })
 
-Sections.LifeTogether:Button({
+Sections.LifeTogether2:Button({
     Title = "CELESTIAL CRYPTIC HUB",
     Desc = "Open the Cryptic hub.",
     Callback = function()
