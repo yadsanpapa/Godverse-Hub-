@@ -3168,8 +3168,8 @@ local TabHandles = {
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 2
     }),
 
-    XD = Tabs.Features:Tab({
-        Title = "XD", Icon = "smile", Desc = "Outfit, emote and hub scripts.", IconThemed = true,
+    Spammer = Tabs.Features:Tab({
+        Title = "Spammer", Icon = "message-square", Desc = "Outfit, emote and hub scripts.", IconThemed = true,
         Locked = false, ShowTabTitle = true, Border = true, LayoutOrder = 3
     }),
 
@@ -3276,17 +3276,17 @@ local Sections = {
 
 --// ADDED SCRIPT TABS
 local LifeTogetherSection = TabHandles.LifeTogether:Section({
-    Title = "LIFE TOGETHER RP", Desc = "Life Together RP script collection.", Icon = "shirt", Box = true, BoxBorder = true,
+    Title = "Life Together Rp", Desc = "Life Together RP script collection.", Icon = "shirt", Box = true, BoxBorder = true,
     FontWeight = Enum.FontWeight.SemiBold, TextTransparency = 0.05, TextXAlignment = "Left", TextSize = 17, Opened = true
 })
 
-local XDSection = TabHandles.XD:Section({
-    Title = "XD SCRIPTS", Desc = "Outfit, emote and hub scripts.", Icon = "smile", Box = true, BoxBorder = true,
+local SpammerSection = TabHandles.Spammer:Section({
+    Title = "Spammer", Desc = "Outfit, emote and hub scripts.", Icon = "smile", Box = true, BoxBorder = true,
     FontWeight = Enum.FontWeight.SemiBold, TextTransparency = 0.05, TextXAlignment = "Left", TextSize = 17, Opened = true
 })
 
-local YadsanSection = TabHandles.Yadsan:Section({
-    Title = "YADSAN SCRIPTS", Desc = "Yadsan script collection.", Icon = "star", Box = true, BoxBorder = true,
+local YadsanScriptsSection = TabHandles.YadsanScripts:Section({
+    Title = "Yadsan Scripts", Desc = "Yadsan script collection.", Icon = "star", Box = true, BoxBorder = true,
     FontWeight = Enum.FontWeight.SemiBold, TextTransparency = 0.05, TextXAlignment = "Left", TextSize = 17, Opened = true
 })
 
@@ -3309,22 +3309,22 @@ local function AddRemoteScriptButton(section, title, desc, url)
     })
 end
 
---// LIFE TOGETHER RP
-AddRemoteScriptButton(LifeTogetherSection, "YADSAN OUTFIT COPIER", "Open the outfit copier GUI.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Outfit_Copier_OV1")
-AddRemoteScriptButton(LifeTogetherSection, "CELESTIAL GEN X", "Open Celestial Gen X.", "https://scriptblox.com/raw/LifeTogether-RP-Gen-X-Hub-236184")
-AddRemoteScriptButton(LifeTogetherSection, "CELESTIAL FROSTBITE X", "Open Celestial Frostbite X.", "https://raw.githubusercontent.com/yadsanpapa/Godverse-Hub-/refs/heads/main/CelestialFrostbiteX.lua")
-AddRemoteScriptButton(LifeTogetherSection, "CELESTIAL CRYPTIC HUB", "Open Celestial Cryptic Hub.", "https://raw.githubusercontent.com/OnlyCryptic/Cryptic/main/main.lua")
+--// Life Together Rp 
+AddRemoteScriptButton(LifeTogetherSection, "Yadsan Edition Spam", "Copy and explore stylish player outfits with the exclusive Yadsan Outfit Copier interface.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Outfit_Copier_OV1")
+AddRemoteScriptButton(LifeTogetherSection, "Celestial Gen X", "Experience Celestial Gen X with exclusive features, unique tools, and advanced customization interface.", "https://scriptblox.com/raw/LifeTogether-RP-Gen-X-Hub-236184")
+AddRemoteScriptButton(LifeTogetherSection, "Celestial Frostbite X", "Discover Frostbite X with icy styling, advanced resize features, and exclusive Celestial experience.", "https://raw.githubusercontent.com/yadsanpapa/Godverse-Hub-/refs/heads/main/CelestialFrostbiteX.lua")
+AddRemoteScriptButton(LifeTogetherSection, "Celestial Cryptic Hub", "Explore Celestial Cryptic Hub featuring unique troll-style tools, custom features, and exclusive interface.", "https://raw.githubusercontent.com/OnlyCryptic/Cryptic/main/main.lua")
 
---// XD
-AddRemoteScriptButton(XDSection, "Yadsan Edition Spam", "Open the outfit changer.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Spammer_OV1")
-AddRemoteScriptButton(XDSection, "Zero Mercy Spammer V1", "Open the emote GUI.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Zm_Spammerv1byshafi.lua")
-AddRemoteScriptButton(XDSection, "Asuka Spammer Red", "Open Cryptic Hub.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/AsukaSpammerByYadsan.lua")
+--// Spammer
+AddRemoteScriptButton(SpammerSection, "Yadsan Edition Spam", "Unleash legendary Yadsan Edition with a royal interface and premium customization feature.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Yadsan_Spammer_OV1")
+AddRemoteScriptButton(SpammerSection, "Zero Mercy Spammer V1", "Experience Zero Mercy Edition with a bold design, powerful features Shafi X Zenex.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/Zm_Spammerv1byshafi.lua")
+AddRemoteScriptButton(SpammerSection, "Asuka Spammer Red", "Enter the Asuka Red Edition with a crimson theme, elite styling, and legendary team identity.", "https://raw.githubusercontent.com/yadsanpapa/Yadsan-/refs/heads/main/AsukaSpammerByYadsan.lua")
 
---// YADSAN
-AddRemoteScriptButton(YadsanSection, "INFINITE YIELD", "Open Infinite Yield admin commands.", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
-AddRemoteScriptButton(YadsanSection, "FE R15 SONIC THE HEDGEHOG", "Load the FE R15 Sonic script.", "https://scriptblox.com/raw/Universal-Script-FE-R15-Sonic-The-Hedgehog-63923")
-AddRemoteScriptButton(YadsanSection, "FE SKY GLITCHER", "Load the sky glitcher script.", "https://rawscripts.net/raw/Universal-Script-sky-destroyer-V2-AXEZZ-110640")
-AddRemoteScriptButton(YadsanSection, "EMOTES", "Open the emote script.", "https://rawscripts.net/raw/Universal-Script-Gaze-emote-74592")
+--// Yadsan Scripts 
+AddRemoteScriptButton(YadsanScriptsSection, "INFINITE YIELD", "Open Infinite Yield admin commands.", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+AddRemoteScriptButton(YadsanScriptsSection, "FE R15 SONIC THE HEDGEHOG", "Load the FE R15 Sonic script.", "https://scriptblox.com/raw/Universal-Script-FE-R15-Sonic-The-Hedgehog-63923")
+AddRemoteScriptButton(YadsanScriptsSection, "FE SKY GLITCHER", "Load the sky glitcher script.", "https://rawscripts.net/raw/Universal-Script-sky-destroyer-V2-AXEZZ-110640")
+AddRemoteScriptButton(YadsanScriptsSection, "EMOTES", "Open the emote script.", "https://rawscripts.net/raw/Universal-Script-Gaze-emote-74592")
 
 Window:SelectTab(1)
 
