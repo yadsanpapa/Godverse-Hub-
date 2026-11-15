@@ -315,7 +315,7 @@ local function createGui()
     titleLabel.Size = UDim2.new(1, -60, 1, 0)
     titleLabel.Position = UDim2.new(0, 30, 0, 0)
     titleLabel.BackgroundTransparency = 1
-    titleLabel.Text = "⚠️ Celestial Frostbite X Re-Size"
+    titleLabel.Text = "⚠️ Celestial Frostbite X Re-Size By Yadsan Bhaiya"
     titleLabel.TextColor3 = Color3.fromRGB(220, 240, 230)
     titleLabel.Font = boldFont
     titleLabel.TextSize = 13
@@ -840,3 +840,15 @@ end)
 task.wait(0.5)
 notify("Frostbite X", "Full Re-Sizer Loaded!", 3)
 print("[Frostbite X] READY ✓")
+
+--// AUTO CHAT MESSAGE
+task.spawn(function()
+    local chatMsg = "------------//// CELESTIAL FROSTBITE X LOADED ♾️ Made by Yadsan_Godverse (CELESTIAL SYNDICATE ON TOP ☃️) ////-----------------"
+    pcall(function()
+        if game:GetService("TextChatService").ChatVersion == Enum.ChatVersion.TextChatService then
+            game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(chatMsg)
+        else
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chatMsg, "All")
+        end
+    end)
+end)
