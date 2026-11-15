@@ -293,7 +293,7 @@ desc2.BackgroundTransparency = 1
 local desc3 = Instance.new("TextLabel", welcomeUI)
 desc3.Size = UDim2.new(1, -50, 0, 20)
 desc3.Position = UDim2.new(0, 25, 0, 160)
-desc3.Text = "H8 diya to cudega 🌶️💀!"
+desc3.Text = "HII I AM YADSAN XD WELCOME TO CELESTIAL SYNDICATE!"
 desc3.Font = Enum.Font.GothamBold
 desc3.TextColor3 = DeepTextDark
 desc3.TextSize = 12
@@ -600,7 +600,7 @@ toggle.Visible = false
 toggle.Size = UDim2.new(0, 120, 0, 40)
 toggle.Position = UDim2.new(0, 20, 1, -55)
 toggle.BackgroundColor3 = PureWhite
-toggle.Text = "⚡ CELESTIAL MENU"
+toggle.Text = "CELESTIAL🔮SYNDICATE"
 toggle.Font = Enum.Font.GothamBold
 toggle.TextColor3 = PureWhite
 toggle.TextSize = 12
@@ -856,7 +856,7 @@ startBtn.MouseButton1Click:Connect(function()
 
     applyIdentity()
     
-    send([[@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CELESTIAL SPAMMER MV1 LOADED 🌸🦁]])
+    send([[@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@-_-@ CELESTIAL SPAMMER MV1 BY LEADER X LUFFY LOADED 🔮👾 CELESTIAL SYNDICATE ON TOP 🔮💢]])
 end)
 
 --==================================================
