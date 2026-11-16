@@ -472,7 +472,7 @@ local textLabel7 = Instance.new("TextLabel", frame7)
 textLabel7.Size = UDim2.new(1, 0, 1, 0)
 textLabel7.Position = UDim2.new(0, 0, 0, 0)
 textLabel7.BackgroundTransparency = 1
-textLabel7.Text = "ASUKA"
+textLabel7.Text = "YS"
 textLabel7.Font = Enum.Font.Code
 textLabel7.TextSize = 36
 textLabel7.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1275,8 +1275,8 @@ func1()
 
 task.spawn(function()
 	task.wait(1)
-	local v1 = func4("♤Asuka h8 🗼 pe 😍")
+	local v1 = func4("♤Asuka Spammer V2 on Top h8 🗼 pe 😍")
 	local v2 = math.clamp(180 - v1 - 1, 5, 140)
 	local v3 = func5(textBox1.Text, 1, v2)
-	func6((v3 ~= "" and v3 .. " " or "") .. "♤Asuka h8 🗼 pe 😍")
+	func6((v3 ~= "" and v3 .. " " or "") .. "♤Asuka Spammer V2 on Top h8 🗼 pe 😍")
 end)
