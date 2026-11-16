@@ -66,7 +66,7 @@ local function func1()
 	if v5 then
 		pcall(function()
 			v5:FireServer("RolePlayName", "♧-🔥- [Asuka Spammer V2 🚩]- ♧-🔥")
-			v5:FireServer("RolePlayBio", "♤-[The  Danav 😈] ❄️☄️ Asuka Spammer V2 🚩 ❄️☄️ //  H8 AFFRAID 😂 -♤")
+			v5:FireServer("RolePlayBio", "♤-[Yadsan_Godverse] ❄️💢 Asuka Spammer V2 🚩 ❄️💢 //  VS AFRAID 😂 -♤")
 		end)
 	end
 end
@@ -155,7 +155,7 @@ local function func2()
 	return {
 		v1 .. " ON TOP 👑",
 		"UNLEASHED BY " .. v1 .. " ⚡",
-		"Asuka SUPREMACY WITH " .. v1 .. " 🔥",
+		"ASUKA SUPREMACY WITH " .. v1 .. " 🔥",
 		"ALL FAIL BEFORE " .. v1 .. " 🔱",
 		v1 .. " RUNS THIS SERVER ⚔️",
 		v1 .. " ON TOP ALWAYS 💎",
@@ -300,7 +300,7 @@ local function func7(parent, arg2)
 	frame.Active = false
 	frame.Parent = parent
 	local tbl = {}
-	local tbl1 = {"✦", "★", "✨", "✧", "❖", "░▒▓█", "🎭", "⚡", "👑", "💥", "🐍", "💎", "𝖁", "⚔️", "🔥", "🔮", "🌑"}
+	local tbl1 = {"✦", "★", "✨", "✧", "❖", "░▒▓█", "🎭", "⚡", "👑", "💥", "🐍", "💎", "💔", "⚔️", "🔥", "🔮", "🌑"}
 
 	for i = 1, arg2 do
 		local v1 = i % 4
@@ -418,7 +418,7 @@ textLabel4.ZIndex = 3
 local textLabel5 = Instance.new("TextLabel", frame4)
 textLabel5.Size = UDim2.new(1, 0, 0, 18)
 textLabel5.Position = UDim2.new(0, 0, 0.52, 0)
-textLabel5.Text = "🎭 Asuka Spammer V2 🚩 RECTANGULAR CYBER ENGINE ⚡"
+textLabel5.Text = "🎭 ASUKA SPAMMER V2 🚩 RECTANGULAR CYBER ENGINE ⚡"
 textLabel5.TextColor3 = Color3.fromRGB(180, 190, 220)
 textLabel5.Font = Enum.Font.Code
 textLabel5.TextSize = 9
@@ -427,7 +427,7 @@ textLabel5.ZIndex = 3
 local textButton1 = Instance.new("TextButton", frame4)
 textButton1.Size = UDim2.new(0, 200, 0, 34)
 textButton1.Position = UDim2.new(0.5, -100, 0.72, 0)
-textButton1.Text = "🚀 LAUNCH CYBER CORE ⚡"
+textButton1.Text = "🚀 LAUNCH CYBER CORE 🚩"
 textButton1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 textButton1.TextColor3 = Color3.fromRGB(12, 12, 18)
 textButton1.Font = Enum.Font.Code
@@ -472,7 +472,7 @@ local textLabel7 = Instance.new("TextLabel", frame7)
 textLabel7.Size = UDim2.new(1, 0, 1, 0)
 textLabel7.Position = UDim2.new(0, 0, 0, 0)
 textLabel7.BackgroundTransparency = 1
-textLabel7.Text = "⚡"
+textLabel7.Text = "ASUKA"
 textLabel7.Font = Enum.Font.Code
 textLabel7.TextSize = 36
 textLabel7.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -586,7 +586,7 @@ local textLabel9 = Instance.new("TextLabel", frame9)
 textLabel9.Size = UDim2.new(1, 0, 1, 0)
 textLabel9.Position = UDim2.new(0, 0, 0, 0)
 textLabel9.BackgroundTransparency = 1
-textLabel9.Text = "⚡"
+textLabel9.Text = "ASUKA"
 textLabel9.Font = Enum.Font.Code
 textLabel9.TextSize = 24
 textLabel9.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -594,7 +594,7 @@ textLabel9.ZIndex = 6
 local textLabel10 = Instance.new("TextLabel", frame8)
 textLabel10.Size = UDim2.new(1, -52, 0, 34)
 textLabel10.Position = UDim2.new(0, 48, 0, 9)
-textLabel10.Text = "Asuka V3 🎭"
+textLabel10.Text = "ASUKA V3 🎭"
 textLabel10.TextColor3 = func()
 textLabel10.TextSize = 11
 textLabel10.Font = Enum.Font.Code
@@ -651,7 +651,7 @@ local tbl5 = {}
 local function func13(arg1)
 	local textButton = Instance.new("TextButton", frame10)
 	textButton.Size = UDim2.new(1, 0, 0, 30)
-	textButton.Text = "❖  " .. string.upper(arg1)
+	textButton.Text = "❖" .. string.upper(arg1)
 	textButton.BackgroundColor3 = Color3.fromRGB(22, 22, 30)
 	textButton.TextColor3 = func()
 	textButton.TextSize = 10
@@ -889,7 +889,7 @@ local textLabel14 = Instance.new("TextLabel", frame20)
 textLabel14.Size = UDim2.new(1, 0, 1, 0)
 textLabel14.Position = UDim2.new(0, 0, 0, 0)
 textLabel14.BackgroundTransparency = 1
-textLabel14.Text = "⚡"
+textLabel14.Text = "ASUKA"
 textLabel14.Font = Enum.Font.Code
 textLabel14.TextSize = 32
 textLabel14.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -907,7 +907,7 @@ textLabel15.ZIndex = 5
 local textLabel16 = Instance.new("TextLabel", frame19)
 textLabel16.Size = UDim2.new(1, -70, 0, 48)
 textLabel16.Position = UDim2.new(0, 66, 0, 28)
-textLabel16.Text = "🎯 TARGET FORMAT: [TARGET] | 💥 PARTICLES: DYNAMIC\n🐍 MODE: SYNCHRONIZED | 𝖁 Asuka CORE V3\n📡 BROADCAST: SERVER GLOBAL REPLICATED"
+textLabel16.Text = "🎯 TARGET FORMAT: [TARGET] | 💥 PARTICLES: DYNAMIC\n🐍 MODE: SYNCHRONIZED | 💔 ASUKA CORE V3\n📡 BROADCAST: SERVER GLOBAL REPLICATED"
 textLabel16.TextColor3 = Color3.fromRGB(180, 180, 210)
 textLabel16.Font = Enum.Font.Code
 textLabel16.TextSize = 8
@@ -1175,7 +1175,7 @@ end)
 local textLabel17 = Instance.new("TextLabel", frame21)
 textLabel17.Size = UDim2.new(1, 0, 0, 20)
 textLabel17.Position = UDim2.new(0, 0, 0.29, 0)
-textLabel17.Text = "ARCHITECT & LEAD CREATOR: Asuka 👑"
+textLabel17.Text = "ARCHITECT & LEAD CREATOR: ASUKA 👑"
 textLabel17.TextColor3 = func()
 textLabel17.Font = Enum.Font.Code
 textLabel17.TextSize = 12
@@ -1184,7 +1184,7 @@ textLabel17.ZIndex = 4
 local textLabel18 = Instance.new("TextLabel", frame21)
 textLabel18.Size = UDim2.new(1, 0, 0, 16)
 textLabel18.Position = UDim2.new(0, 0, 0.37, 0)
-textLabel18.Text = "⚡ [ FOUNDER & CHIEF SYSTEM ENGINE: Asuka / TMX ] ⚡"
+textLabel18.Text = "⚡ [ FOUNDER & CHIEF SYSTEM ENGINE: ASUKA / TMX ] ⚡"
 textLabel18.TextColor3 = func()
 textLabel18.Font = Enum.Font.Code
 textLabel18.TextSize = 9.5
@@ -1199,7 +1199,7 @@ Instance.new("UICorner", frame23).CornerRadius = UDim.new(0, 8)
 local textLabel19 = Instance.new("TextLabel", frame23)
 textLabel19.Size = UDim2.new(1, -16, 1, -10)
 textLabel19.Position = UDim2.new(0, 8, 0, 5)
-textLabel19.Text = "🎭 Asuka CORE ENGINE V3 - ULTIMATE LANDSCAPE SPAMMER\n⚡ CYBER DUAL-THEME ARCHITECTURE & TARGET MATRIX\n👑 MUCH LOVE & SUPREMACY FROM Asuka // TMX ON TOP"
+textLabel19.Text = "🎭 ASUKA CORE ENGINE V3 - ULTIMATE LANDSCAPE SPAMMER\n⚡ CYBER DUAL-THEME ARCHITECTURE & TARGET MATRIX\n👑 MUCH LOVE & SUPREMACY FROM ASUKA // TMX ON TOP"
 textLabel19.TextColor3 = Color3.fromRGB(200, 200, 220)
 textLabel19.Font = Enum.Font.Code
 textLabel19.TextSize = 8.5
@@ -1220,7 +1220,7 @@ func8(textButton6, Color3.fromRGB(220, 220, 255), Color3.fromRGB(255, 255, 255))
 
 textButton6.MouseButton1Click:Connect(function()
 	if setclipboard then
-		setclipboard("https://www.roblox.com/share?code=4b0e644fe1f129408c605d4f578a2dc0&type=Profile&source=ProfileShare&stamp=1785254789683")
+		setclipboard("Yadsan_GodVerse")
 		textButton6.Text = "✨ COPIED TO CLIPBOARD!"
 		task.wait(2)
 		textButton6.Text = "👤 COPY DEVELOPER PROFILE LINK ⚡"
@@ -1275,8 +1275,8 @@ func1()
 
 task.spawn(function()
 	task.wait(1)
-	local v1 = func4("♤Asuka h8 🗼 pe ♤")
+	local v1 = func4("♤Asuka h8 🗼 pe 😍")
 	local v2 = math.clamp(180 - v1 - 1, 5, 140)
 	local v3 = func5(textBox1.Text, 1, v2)
-	func6((v3 ~= "" and v3 .. " " or "") .. "♤Asuka h8 🗼 pe ♤")
+	func6((v3 ~= "" and v3 .. " " or "") .. "♤Asuka h8 🗼 pe 😍")
 end)
