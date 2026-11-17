@@ -115,247 +115,60 @@ title.TextColor3 = Color3.fromRGB(255, 225, 175)
 title.TextScaled = true
 title.Font = Enum.Font.GothamBold
 title.Parent = background
---==================================================
--- CELESTIAL SYNDICATE | PORTAL INTRO + PHOTO BADGE
--- Place this at the top of Celestial_GodverseHubUV1.lua
---==================================================
-local Players = game:GetService("Players")
-local TweenService = game:GetService("TweenService")
-local Player = Players.LocalPlayer
-local PlayerGui = Player:WaitForChild("PlayerGui")
 
--- SETTINGS
-local PHOTO_ASSET_ID = "rbxassetid://YOUR_IMAGE_ID" -- Replace with your uploaded Roblox Image ID
-local DURATION = 5
-local BG_COLOR = Color3.fromRGB(8, 8, 12)
-local CREAM_GOLD = Color3.fromRGB(245, 224, 175)
-local SUBTITLE_PURPLE = Color3.fromRGB(125, 130, 235)
-local BADGE_GREEN = Color3.fromRGB(55, 200, 85)
+local subtitle = Instance.new("TextLabel")
+subtitle.Name = "Subtitle"
+subtitle.Size = UDim2.new(1, -24, 0, 30)
+subtitle.AnchorPoint = Vector2.new(0.5, 0)
+subtitle.Position = UDim2.new(0.5, 0, 0.70, 0)
+subtitle.BackgroundTransparency = 1
+subtitle.Text = "ON TOP"
+subtitle.TextColor3 = Color3.fromRGB(190, 150, 255)
+subtitle.TextSize = 22
+subtitle.Font = Enum.Font.GothamSemibold
+subtitle.Parent = background
 
-local RAINBOW_SEQUENCE = ColorSequence.new({
-    ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 75, 45)),   -- Red/Orange
-    ColorSequenceKeypoint.new(0.20, Color3.fromRGB(255, 210, 45)),  -- Yellow/Gold
-    ColorSequenceKeypoint.new(0.40, Color3.fromRGB(50, 230, 110)),  -- Green
-    ColorSequenceKeypoint.new(0.60, Color3.fromRGB(45, 200, 255)),  -- Cyan
-    ColorSequenceKeypoint.new(0.80, Color3.fromRGB(130, 85, 255)),  -- Purple/Blue
-    ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 55, 175))   -- Pink/Magenta
-})
+-- Six-second loading bar
+local barBack = Instance.new("Frame")
+barBack.Name = "LoadingBarBack"
+barBack.Size = UDim2.new(0.62, 0, 0, 8)
+barBack.AnchorPoint = Vector2.new(0.5, 0.5)
+barBack.Position = UDim2.new(0.5, 0, 0.86, 0)
+barBack.BackgroundColor3 = Color3.fromRGB(45, 45, 55)
+barBack.BorderSizePixel = 0
+barBack.Parent = background
 
--- CLEANUP EXISTING INTRO
-local oldGui = PlayerGui:FindFirstChild("CELESTIAL_SYNDICATE_INTRO")
-if oldGui then oldGui:Destroy() end
+local barBackCorner = Instance.new("UICorner")
+barBackCorner.CornerRadius = UDim.new(1, 0)
+barBackCorner.Parent = barBack
 
--- MAIN SCREEN GUI
-local Gui = Instance.new("ScreenGui")
-Gui.Name = "CELESTIAL_SYNDICATE_INTRO"
-Gui.IgnoreGuiInset = true
-Gui.ResetOnSpawn = false
-Gui.DisplayOrder = 999
-Gui.Parent = PlayerGui
+local bar = Instance.new("Frame")
+bar.Name = "Progress"
+bar.Size = UDim2.new(0, 0, 1, 0)
+bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bar.BorderSizePixel = 0
+bar.Parent = barBack
 
-local BG = Instance.new("Frame")
-BG.Size = UDim2.fromScale(1, 1)
-BG.BackgroundColor3 = BG_COLOR
-BG.BorderSizePixel = 0
-BG.Parent = Gui
+local barCorner = Instance.new("UICorner")
+barCorner.CornerRadius = UDim.new(1, 0)
+barCorner.Parent = bar
 
--- CENTER RING CONTAINER
-local Portal = Instance.new("Frame")
-Portal.Name = "Portal"
-Portal.AnchorPoint = Vector2.new(0.5, 0.5)
-Portal.Position = UDim2.fromScale(0.5, 0.36)
-Portal.Size = UDim2.fromOffset(230, 230)
-Portal.BackgroundTransparency = 1
-Portal.Parent = BG
+local barGradient = Instance.new("UIGradient")
+barGradient.Color = rainbow.Color
+barGradient.Parent = bar
 
-local function ResizePortal()
-    local camera = workspace.CurrentCamera
-    if not camera then return end
-    local viewport = camera.ViewportSize
-    local diameter = math.clamp(math.floor(math.min(viewport.X, viewport.Y) * 0.48), 180, 300)
-    Portal.Size = UDim2.fromOffset(diameter, diameter)
-end
-ResizePortal()
-local resizeConn = workspace:GetPropertyChangedSignal("CurrentCamera"):Connect(ResizePortal)
+local loadingTween = TweenService:Create(
+    bar,
+    TweenInfo.new(6, Enum.EasingStyle.Linear),
+    {Size = UDim2.new(1, 0, 1, 0)}
+)
+loadingTween:Play()
+loadingTween.Completed:Wait()
 
--- OUTER RAINBOW RING
-local OuterRing = Instance.new("Frame")
-OuterRing.AnchorPoint = Vector2.new(0.5, 0.5)
-OuterRing.Position = UDim2.fromScale(0.5, 0.5)
-OuterRing.Size = UDim2.fromScale(1, 1)
-OuterRing.BackgroundTransparency = 1
-OuterRing.Parent = Portal
-
-local OuterCorner = Instance.new("UICorner")
-OuterCorner.CornerRadius = UDim.new(1, 0)
-OuterCorner.Parent = OuterRing
-
-local OuterStroke = Instance.new("UIStroke")
-OuterStroke.Color = Color3.new(1, 1, 1)
-OuterStroke.Thickness = 4
-OuterStroke.Parent = OuterRing
-
-local RingGradient = Instance.new("UIGradient")
-RingGradient.Color = RAINBOW_SEQUENCE
-RingGradient.Rotation = 45
-RingGradient.Parent = OuterStroke
-
--- Slowly rotate the rainbow gradient around the ring
-TweenService:Create(
-    RingGradient,
-    TweenInfo.new(6, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1),
-    { Rotation = 405 }
-):Play()
-
--- TOP CIRCULAR PHOTO BADGE (Matches Screenshot)
-local BadgeFrame = Instance.new("Frame")
-BadgeFrame.Name = "PhotoBadge"
-BadgeFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-BadgeFrame.Position = UDim2.fromScale(0.5, 0) -- Sits directly on top of the ring
-BadgeFrame.Size = UDim2.fromOffset(56, 56)
-BadgeFrame.BackgroundColor3 = Color3.fromRGB(18, 22, 26)
-BadgeFrame.BorderSizePixel = 0
-BadgeFrame.ZIndex = 5
-BadgeFrame.Parent = Portal
-
-local BadgeCorner = Instance.new("UICorner")
-BadgeCorner.CornerRadius = UDim.new(1, 0)
-BadgeCorner.Parent = BadgeFrame
-
-local BadgeStroke = Instance.new("UIStroke")
-BadgeStroke.Color = BADGE_GREEN
-BadgeStroke.Thickness = 2.5
-BadgeStroke.Parent = BadgeFrame
-
-local PhotoImage = Instance.new("ImageLabel")
-PhotoImage.Name = "LogoPhoto"
-PhotoImage.AnchorPoint = Vector2.new(0.5, 0.5)
-PhotoImage.Position = UDim2.fromScale(0.5, 0.5)
-PhotoImage.Size = UDim2.fromScale(0.92, 0.92)
-PhotoImage.BackgroundTransparency = 1
-PhotoImage.Image = PHOTO_ASSET_ID
-PhotoImage.ScaleType = Enum.ScaleType.Crop
-PhotoImage.ZIndex = 6
-PhotoImage.Parent = BadgeFrame
-
-local PhotoCorner = Instance.new("UICorner")
-PhotoCorner.CornerRadius = UDim.new(1, 0)
-PhotoCorner.Parent = PhotoImage
-
--- INNER ROTATING OCTAGON
-local OctagonLayer = Instance.new("Frame")
-OctagonLayer.AnchorPoint = Vector2.new(0.5, 0.5)
-OctagonLayer.Position = UDim2.fromScale(0.5, 0.5)
-OctagonLayer.Size = UDim2.fromScale(1, 1)
-OctagonLayer.BackgroundTransparency = 1
-OctagonLayer.Parent = Portal
-
-local function CreateOctagon(parent, sides, radius, color)
-    for i = 1, sides do
-        local a1 = ((i - 1) / sides) * math.pi * 2
-        local a2 = (i / sides) * math.pi * 2
-        local x1, y1 = 0.5 + math.cos(a1) * radius, 0.5 + math.sin(a1) * radius
-        local x2, y2 = 0.5 + math.cos(a2) * radius, 0.5 + math.sin(a2) * radius
-        local dx, dy = x2 - x1, y2 - y1
-
-        local line = Instance.new("Frame")
-        line.AnchorPoint = Vector2.new(0.5, 0.5)
-        line.Position = UDim2.fromScale((x1 + x2) / 2, (y1 + y2) / 2)
-        line.Size = UDim2.fromScale(math.sqrt(dx * dx + dy * dy), 0)
-        line.Rotation = math.deg(math.atan2(dy, dx))
-        line.BackgroundColor3 = color
-        line.BorderSizePixel = 0
-        line.Parent = parent
-
-        local stroke = Instance.new("UIStroke")
-        stroke.Color = color
-        stroke.Thickness = 1.5
-        stroke.Parent = line
-    end
-end
-
-CreateOctagon(OctagonLayer, 8, 0.28, CREAM_GOLD)
-TweenService:Create(
-    OctagonLayer,
-    TweenInfo.new(16, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1),
-    { Rotation = 360 }
-):Play()
-
--- TITLE & SUBTITLE
-local Title = Instance.new("TextLabel")
-Title.AnchorPoint = Vector2.new(0.5, 0.5)
-Title.Position = UDim2.fromScale(0.5, 0.64)
-Title.Size = UDim2.fromScale(0.9, 0.07)
-Title.BackgroundTransparency = 1
-Title.Text = "CELESTIAL SYNDICATE"
-Title.TextColor3 = CREAM_GOLD
-Title.Font = Enum.Font.GothamBlack
-Title.TextScaled = true
-Title.TextTransparency = 1
-Title.Parent = BG
-
-local Subtitle = Instance.new("TextLabel")
-Subtitle.AnchorPoint = Vector2.new(0.5, 0.5)
-Subtitle.Position = UDim2.fromScale(0.5, 0.72)
-Subtitle.Size = UDim2.fromScale(0.5, 0.032)
-Subtitle.BackgroundTransparency = 1
-Subtitle.Text = "ON TOP"
-Subtitle.TextColor3 = SUBTITLE_PURPLE
-Subtitle.Font = Enum.Font.GothamBold
-Subtitle.TextScaled = true
-Subtitle.TextTransparency = 1
-Subtitle.Parent = BG
-
--- RAINBOW PROGRESS BAR
-local BarBG = Instance.new("Frame")
-BarBG.AnchorPoint = Vector2.new(0.5, 0.5)
-BarBG.Position = UDim2.fromScale(0.5, 0.85)
-BarBG.Size = UDim2.new(0.62, 0, 0, 8)
-BarBG.BackgroundColor3 = Color3.fromRGB(45, 45, 55)
-BarBG.BorderSizePixel = 0
-BarBG.Parent = BG
-
-local BarBGCorner = Instance.new("UICorner")
-BarBGCorner.CornerRadius = UDim.new(1, 0)
-BarBGCorner.Parent = BarBG
-
-local BarFill = Instance.new("Frame")
-BarFill.Size = UDim2.fromScale(0, 1)
-BarFill.BackgroundColor3 = Color3.new(1, 1, 1)
-BarFill.BorderSizePixel = 0
-BarFill.Parent = BarBG
-
-local BarFillCorner = Instance.new("UICorner")
-BarFillCorner.CornerRadius = UDim.new(1, 0)
-BarFillCorner.Parent = BarFill
-
-local BarGradient = Instance.new("UIGradient")
-BarGradient.Color = RAINBOW_SEQUENCE
-BarGradient.Parent = BarFill
-
--- PLAY INTRO ANIMATIONS
-TweenService:Create(Title, TweenInfo.new(0.9, Enum.EasingStyle.Sine), { TextTransparency = 0 }):Play()
-TweenService:Create(Subtitle, TweenInfo.new(1.1, Enum.EasingStyle.Sine), { TextTransparency = 0 }):Play()
-TweenService:Create(BarFill, TweenInfo.new(DURATION, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), { Size = UDim2.fromScale(1, 1) }):Play()
-
-task.wait(DURATION)
-
--- SMOOTH FADE OUT
-for _, obj in ipairs(Gui:GetDescendants()) do
-    if obj:IsA("GuiObject") then
-        local props = { BackgroundTransparency = 1 }
-        if obj:IsA("TextLabel") then props.TextTransparency = 1 end
-        if obj:IsA("ImageLabel") then props.ImageTransparency = 1 end
-        TweenService:Create(obj, TweenInfo.new(0.6), props):Play()
-    elseif obj:IsA("UIStroke") then
-        TweenService:Create(obj, TweenInfo.new(0.6), { Transparency = 1 }):Play()
-    end
-end
-
-task.wait(0.65)
-if resizeConn then resizeConn:Disconnect() end
-Gui:Destroy()
-
+rainbowTween:Cancel()
+heptagonTween:Cancel()
+rotationValue:Destroy()
+introGui:Destroy()
 
 --// YADSAN HUB UV1 - WindUI Interface
 
